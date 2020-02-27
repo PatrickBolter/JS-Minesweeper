@@ -187,7 +187,8 @@ function click(x, y, cell) {
                 // Skip this cell, cells that are clicked, cells that are not clicked and are not mines and are not flagged
                 if (i == x && j == y || grid[i][j][1] || (!grid[i][j][1] && !grid[i][j][2] && grid[i][j][0] > 0)) 
                     continue;
-                
+                // Stop the timer
+                clearInterval(timer);
                 // Show mines
                 if (grid[i][j][0] == 0) {
                     next.style.backgroundImage = "url('images/tile_mine2.png')";
