@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset='utf-8'/>
+        <link rel='stylesheet' type='text/css' href='css/styles.css'> 
+        <script type='text/javascript' src='scripts/MineSweeper.js'></script>
+        <script type='text/javascript' src='scripts/Settings.js'></script>
+    </head>
+
+    <body>
+        <!--<div id='debug'></div>-->
+        
+        <div id='game-container'>
+            <div id='controls'>
+                <input type='text' id='time' class='timer' readonly unselectable="on" value='0:00'
+                    onselectstart="return false;" onmousedown="return false;">
+                <button type='button' id='new-game' class='control-button'></button> 
+                <button type='button' id='settings-button' class='control-button'></button> 
+            </div>
+            <script>newGame(15,20)</script>
+        </div>
+
+        <div id='settings'>
+            <div id='settings-inner'>
+                <div id='settings-head'>Settings</div>
+                <div class='slider-container'>
+                    <div class='input-tag'>Size</div> <input type='range' min='6' max ='50' value='15' class='slider' id='size-slider'> 
+                    <input type='number' id='size-count' class='num-input' min=6 max='50' readonly unselectable="on" value='15'
+                    onselectstart="return false;" onmousedown="return false;">
+                </div>
+                <div class='slider-container'>
+                    <div class='input-tag'>Mines</div> <input type='range' min='1' max ='300' value='20' class='slider' id='mine-slider'>
+                    <input type='number' id='mine-count' class='num-input' min=1 max='29' readonly unselectable="on" value='20'
+                    onselectstart="return false;" 
+                    onmousedown="return false;">
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>bindNewButton()</script>
+    <script>bindSettingButton()</script>
+</html>
