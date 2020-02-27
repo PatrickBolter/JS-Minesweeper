@@ -163,6 +163,8 @@ function newGame(s, m) {
     face.style.left = (size * cellSize) / 2 -12 +"px";
 
     // Reset timer
+    if (timer != null)
+        clearInterval(timer);
     timer = null;
     time = 0;
     let t = document.getElementById("time").value = '0:00';
